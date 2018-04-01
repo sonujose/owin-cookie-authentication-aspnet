@@ -1,0 +1,20 @@
+﻿@model OwinAuthenticationIdetity.Controllers.RegisterModel
+
+<h1>Login</h1>
+<hr />
+
+@using (Html.BeginForm("login", "Account", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    @Html.LabelFor(x => x.userName) @Html.TextBoxFor(x => x.userName)
+    <br />
+        @Html.LabelFor(x => x.password) @Html.PasswordFor(x => x.password)
+        <br />
+        <input class="btn" type="submit" value="Login" />
+}
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
